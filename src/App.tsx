@@ -34,9 +34,10 @@ function App() {
   }
 
   const addStat = (player:any) => {
+    console.log(stats, player)
     setStats((stats) => {
       let updatedStats = JSON.parse(JSON.stringify(stats));
-      updatedStats[stat[0]][team] = updatedStats[stat[0]][team] + Number(`${value === '+' ? 1 : -1}`)
+      updatedStats[stats[0]][team] = updatedStats[stats[0]][team] + Number(`${value === '+' ? 1 : -1}`)
       return updatedStats;
     })
     setPlayerOptions(false);
